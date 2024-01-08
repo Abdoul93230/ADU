@@ -1,0 +1,61 @@
+.Qrcode{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    background-color: white;
+    position: relative;
+    /* border: 2px solid wi; */
+}
+.Qrcode h1{
+    width: 100%;
+    color: white;
+    background-color: black;
+    margin-top: -2px;
+    border-radius: 2px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.Qrcode #readr{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid gray;
+    border-radius: 5px;
+    width: 90%;
+    height: auto;
+    margin: 150px auto;
+}
+.Qrcode #readr #readr__dashboard_section{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.Qrcode #readr #readr__dashboard_section_csr{
+    display: flex;
+    flex-direction: column;
+}
+.Qrcode #readr #readr__dashboard_section_csr span{
+    display: block;
+}
+
+.Qrcode #readr #readr__dashboard_section_csr button{
+    width: 200px;
+    padding: 10px;
+    margin: 6px auto;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    outline: none;
+    border-radius: 10px;
+    font-size: 16px;
+    border: none !important;
+    cursor: pointer;
+}
+
+.Qrcode  #html5-qrcode-anchor-scan-type-change{
+    display: none !important;
+}

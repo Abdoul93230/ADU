@@ -1,29 +1,45 @@
-import { QrReader } from "react-qr-reader";
-import { useState } from "react";
+import React from "react";
+import { useEffect, useState } from "react";
 
-const Test = (props) => {
-  const [data, setData] = useState("No result");
+import { Html5QrcodeScanner } from "html5-qrcode";
 
-  const handleScan = (result) => {
-    if (!!result) {
-      setData(result);
-    }
-  };
+import "./Test.css";
 
-  const handleError = (error) => {
-    console.info(error);
-  };
+function Test() {
+  const [scanResult, setScanResult] = useState();
+  useEffect(() => {
+    const scanner = new Html5QrcodeScanner("readr", {
+      qrbox: {
+        width: 250,
+        height: 250,
+        borderColor: "#FF0000",
+        borderRadius: 10,
+      },
+      fps: 5,
+    });
 
+    const success = (result) => {
+      scanner.clear();
+      setScanResult(result);
+    };
+
+    const error = (err) => {
+      console.log(err);
+    };
+    scanner.render(success, error);
+  }, []);
   return (
-    <>
-      <QrReader
-        onScan={handleScan}
-        onError={handleError}
-        style={{ width: "100%" }}
-      />
-      <p>{data}</p>
-    </>
+    <div className="Qrcode">
+      <h1>Pass Verification</h1>
+      {scanResult ? (
+        <div>
+          Success : <a href={`https://${scanResult}`}>{scanResult}</a>
+        </div>
+      ) : (
+        <div id="readr"></div>
+      )}
+    </div>
   );
-};
+}
 
 export default Test;

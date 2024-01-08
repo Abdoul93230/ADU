@@ -1,0 +1,62 @@
+.Home{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 5px;
+    color: white;
+    background-color: black;
+    position: relative;
+}
+
+.Home .un{
+    width: 70%;
+    height: 150px;
+    margin: 0px auto;
+}
+
+.Home .un img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Home .deux {
+    width: 100%;
+    height: auto;
+}
+
+.Home .deux h1{
+    text-transform: uppercase;
+    /* font-family: serif; */
+    letter-spacing: 4.5px;
+}
+
+.Home .deux h4{
+    font-weight: 300;
+    margin-top: -20px;
+}
+
+.Home .trois{
+    width: 100%;
+    height: auto;
+}
+
+.Home .trois button{
+    padding: 10px 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    width: 90%;
+}
+.Home .trois p{
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    width: 100%;
+    font-weight: lighter;
+    font-size: 12px;
+}
