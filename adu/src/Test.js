@@ -68,7 +68,7 @@ function Test() {
       <h1 onClick={() => handleVerification()}>Pass Verification</h1>
       {scanResult ? (
         <div>
-          Success : <a href={`https://${scanResult}`}>{scanResult}</a>
+          {message} : <a href={`https://${scanResult}`}>{scanResult}</a>
         </div>
       ) : (
         <div id="readr"></div>
