@@ -1,0 +1,20 @@
+import React, { useState } from "react";
+import { PropagateLoader } from "react-spinners";
+
+import "./LoadingIndicator.css"; // Import your CSS file containing the .loading-indicator class
+
+const LoadingIndicator = (props) => {
+  return (
+    <div>
+      {props.loading ? (
+        <div className="loading-indicator">
+          <PropagateLoader color="#FF6969" size={15} />
+        </div>
+      ) : (
+        <>{props.children}</>
+      )}
+    </div>
+  );
+};
+
+export default LoadingIndicator;
