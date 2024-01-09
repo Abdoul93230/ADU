@@ -11,7 +11,7 @@ function Test() {
   const [scanResult, setScanResult] = useState();
   const [message, setMessage] = useState("");
   // console.log(csv);
-  const handleVerification = () => {
+  const handleVerification = (res) => {
     // Charger le fichier CSV
     Papa.parse("/files/final_tokens.csv", {
       download: true,
@@ -20,14 +20,12 @@ function Test() {
         // console.log(codes);
 
         // Recherche du code dans le fichier CSV
-        const codeExists = codes.some(
-          (row) => row.Code === scanResult && row.Valide
-        );
+        const codeExists = codes.some((row) => row.Token === res && row.Valide);
 
         if (codeExists) {
           // Mettre à jour le fichier CSV (changer l'attribut 'Valide' à false)
           const updatedCodes = codes.map((row) =>
-            row.Code === scanResult ? { ...row, Valide: false } : row
+            row.Token === res ? { ...row, Valide: false } : row
           );
 
           // Sauvegarder les modifications (ici, cela ne sauvegarde pas réellement le fichier CSV)
@@ -56,6 +54,7 @@ function Test() {
     const success = (result) => {
       scanner.clear();
       setScanResult(result);
+      handleVerification(result);
     };
 
     const error = (err) => {
