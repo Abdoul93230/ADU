@@ -3,7 +3,7 @@ import { Html5QrcodeScanner } from "html5-qrcode";
 import { useNavigate } from "react-router-dom";
 import axios from "axios"; // Importez Axios
 import img1 from "./images/i3.png";
-import img2 from "./images/i4.png";
+import img2 from "./images/i9.png";
 
 import "./Test.css";
 
@@ -63,7 +63,7 @@ function Test() {
         </div>
         <div className="deux">
           <h2>ACCeS AUTORISé</h2>
-          <span>Code :</span>
+          <h6>Code :</h6>
           <h5>{scanResult}</h5>
         </div>
         <div className="trois">
@@ -79,10 +79,8 @@ function Test() {
         </div>
         <div className="deux">
           <h2>ACCeS NON AUTORISé</h2>
-          <span>
-            Ce ticket a déjà été utilisé
-            <br /> code:{" "}
-          </span>
+          <span>Ce ticket a déjà été utilisé</span>
+          <h6>code:</h6>
           <h5>{scanResult}</h5>
         </div>
         <div className="trois">
@@ -98,10 +96,8 @@ function Test() {
         </div>
         <div className="deux">
           <h2>Pass Non Valide</h2>
-          <span>
-            Il n’y a aucun ticket avec ce code
-            <br /> code:{" "}
-          </span>
+          <span>Il n’y a aucun ticket avec ce code</span>
+          <h6>code:</h6>
           <h5>{scanResult}</h5>
         </div>
         <div className="trois">

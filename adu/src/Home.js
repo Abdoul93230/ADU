@@ -32,7 +32,7 @@ function Home() {
         <div className="trois">
           <img src={img2} alt="loading" />
           <button onClick={() => navigue("/scanne")}>Continue</button>
-          <p>Continue</p>
+          <p>by JR</p>
         </div>
       </div>
     </LoadingIndicator>
