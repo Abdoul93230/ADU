@@ -41,6 +41,12 @@
     width: 100%;
     height: auto;
 }
+.Home{
+    background-image: url("./images/1709051308058.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .Home .trois button{
     padding: 10px 30px;
